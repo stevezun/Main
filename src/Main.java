@@ -1,7 +1,7 @@
 public class Main {
   public static void main(String[] args) {
-//        System.out.println("factorial(2) = " + factorial(2));
-//        System.out.println("factorial(10) = " + factorial(10));
+        System.out.println("factorial(2) = " + factorial(2));
+        System.out.println("factorial(10) = " + factorial(10));
 //        System.out.println("fibonacci(2) = " + fibonacci(2));
 //        System.out.println("fibonacci(10) = " + fibonacci(10));
 //        System.out.println("sequence1(2) = " + sequence1(2));
@@ -16,9 +16,12 @@ public class Main {
   }
 
   public static double factorial(double n) {
-    // your code goes here
-    // return 0 is a placeholder you must replace it
-    return 0;
+    if (n == 0){
+      return 1;
+      //The factorial of 0 is 1.
+    }
+    else {
+    return n * factorial(n-1);
   }
 
   public static double fibonacci(double n) {
