@@ -11,9 +11,11 @@ public class Main {
     System.out.println("sequence2(10) = " + sequence2(10));
     System.out.println("hofsQ(2) = " + hofsQ(2));
     System.out.println("hofsQ(10) = " + hofsQ(10));
-        System.out.println("tetration(2, 3) = " + tetration(2, 3));
-        System.out.println("tetration(3, 2) = " + tetration(3, 2));
-        System.out.println("tetration(3, 3) = " + tetration(3, 3));
+    System.out.println("tetration(2, 3) = " + tetration(2, 3));
+    System.out.println("tetration(3, 2) = " + tetration(3, 2));
+    System.out.println("tetration(3, 3) = " + tetration(3, 3));
+    System.out.println("squareRoot(Math.PI) = " + squareRoot(Math.PI));
+    System.out.println("squareRoot(9) = " + squareRoot(9));
   }
 
   public static double factorial(double n) {
@@ -58,13 +60,23 @@ public class Main {
           return hofsQ(n - hofsQ(n - 1) + hofsQ(n - hofsQ(n - 2)));
         }
       }
+      //Stackoverflow, not sure why.
 
   public static double tetration(double a, double n) {
-    // your code goes here
-    // return 0 is a placeholder you must replace it
-    return 0;
+    if (n == 0) {
+      return 0;
+    } else {
+      return Math.pow( a, n - 1);
+    }
   }
 
-  // your chosen math sequence goes here
+  public static double squareRoot(double n){
+    if ( n == 0) {
+      return 1;
+    }
+    else {
+      return Math.sqrt(n);
+    }
+  }
 }
 
